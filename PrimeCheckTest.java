@@ -48,9 +48,9 @@ public class PrimeCheckTest {
       661, 673, 677, 683, 691, 701, 709, 719, 727, 733, 739, 743, 751, 757, 761, 769, 773, 787, 797, 809,
       811, 821, 823, 827, 829, 839, 853, 857, 859, 863, 877, 881, 883, 887, 907, 911, 919, 929, 937, 941,
       947, 953, 967, 971, 977, 983, 991, 997};
-    int j = 0;
+    int j = 1;
     for (int i = 4; i < 1000; i++){
-      if (i == primes[j+1]){
+      if (j>primes.length && i == primes[j]){
         j++;
       } else {
         assertEquals("Test non-prime" + i, false, PrimeCheck.isPrime(i));
