@@ -50,7 +50,7 @@ public class PrimeCheckTest {
       947, 953, 967, 971, 977, 983, 991, 997};
     int j = 1;
     for (int i = 4; i < 1000; i++){
-      if (j>primes.length && i == primes[j]){
+      if (j < primes.length && i == primes[j]){
         j++;
       } else {
         assertEquals("Test non-prime" + i, false, PrimeCheck.isPrime(i));
